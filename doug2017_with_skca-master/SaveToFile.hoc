@@ -1,0 +1,88 @@
+
+//--------------------------------------------------------------------------------------------------------------------------------------------
+//Messaging panel and functionalities for saving files
+//--------------------------------------------------------------------------------------------------------------------------------------------
+
+objref vbox5
+vbox5 = new VBox()
+vbox5.intercept(1)   //all following creations go into the "vbox" box
+xpanel("Saving Simulation Data", 1)
+xlabel("")
+xlabel("Would you like to save simulated data?")
+xlabel("")
+xbutton("YES, Save my data", "savalldata()")
+xbutton("Do NOT Save Yet", "run()")
+xbutton("Close dialogue, Do NOT want to Save anything", "vbox5UNMAP()")
+
+xpanel()
+vbox5.intercept(0)   //ends intercept mode
+vbox5.map("Saving Simulations",350, 0, -1, 1)
+
+proc vbox5UNMAP(){
+vbox5.unmap
+}
+
+
+objref rect, recv, recik_kA, recicaLVA_caLVA, recicaHVA_caHVA, recina_NaT, recina_NaP, recih_H, recik_kM, recik_kDR, recileak_leak       //create vectors to hold t & v values from simulations
+rect = new Vector(400001)
+recv = new Vector(400001)
+recik_kA = new Vector(400001)
+recicaLVA_caLVA = new Vector(400001) 
+recicaHVA_caHVA = new Vector(400001)  
+recina_NaT = new Vector(400001)
+recina_NaP = new Vector(400001)
+recih_H = new Vector(400001)
+recik_kM = new Vector(400001)
+recik_kDR = new Vector(400001)
+recileak_leak = new Vector(400001)
+
+  
+rect.record(&t)                       //record t values in the vector rect 
+recv.record(&DA.v(0.5))               //record v values in the vector recv
+recik_kA.record(&DA.ik_kA(0.5))             //record ik values in the vector recik 
+recicaLVA_caLVA.record(&DA.icaLVA_caLVA(0.5))             //record icaLVA values in the vector recicaLVA_caLVA 
+recicaHVA_caHVA.record(&DA.icaHVA_caHVA(0.5))            //record icaHVA values in the vector recicaHVA_caHVA 
+recina_NaT.record(&DA.ina_NaT(0.5)) 
+recina_NaP.record(&DA.ina_NaP(0.5)) 
+recih_H.record(&DA.ih_H(0.5)) 
+recik_kM.record(&DA.ik_kM(0.5)) 
+recik_kDR.record(&DA.ik_kDR(0.5)) 
+recileak_leak.record(&DA.ileak_leak(0.5))
+
+
+
+objref savdata              //create a file to be opened and saved and to hold values from vectors rect and recv
+savdata = new File()
+savdata.wopen("vlPAG_DRN_Analysis.dat")
+savdata.printf("t DA.v(0.5)\n")             //first line of data file
+savdata.printf("s mV mA/cm2 mA/cm2 mA/cm2 mA/cm2 mA/cm2 mA/cm2 mA/cm2 mA/cm2 mA/cm2\n")       //second line of data for units
+savdata.printf("time voltage ik_kA icaLVA_calLVA icaHVA_caHVA ina_NaT ina_NaP ih_H ik_kM ik_kDR ileak_leak\n")       //third line of data for labels      
+objref tempmatrix
+tempmatrix = new Matrix(400001, 11)
+tempmatrix.setcol(0, rect)
+tempmatrix.setcol(1, recv)
+tempmatrix.setcol(2, recik_kA)
+tempmatrix.setcol(3, recicaLVA_caLVA)
+tempmatrix.setcol(4, recicaHVA_caHVA)
+tempmatrix.setcol(5, recina_NaT)
+tempmatrix.setcol(6, recina_NaP)
+tempmatrix.setcol(7, recih_H)
+tempmatrix.setcol(8, recik_kM)
+tempmatrix.setcol(9, recik_kDR)
+tempmatrix.setcol(10, recileak_leak)
+
+
+tempmatrix.fprint(savdata, " %g")
+
+proc savalldata(){
+savdata.wopen("vlPAG_DRN_Analysis.dat")
+savdata.printf("t DA.v(0.5)\n")             //first line of data file
+savdata.printf("s mV mA/cm2 mA/cm2 mA/cm2 mA/cm2 mA/cm2 mA/cm2 mA/cm2 mA/cm2 mA/cm2\n")       //second line of data for units
+savdata.printf("time voltage ik_kA icaLVA_caLVA icaHVA_caHVA ina_NaT ina_NaP ih_H ik_kM ik_kDR il_leak\n")      //third line of data for labels  
+savdata.printf("%d\n",rect.size())
+for i=0, rect.size()-1 {
+   savdata.printf("%g\ %g\ %g\ %g\ %g\ %g\ %g\ %g\ %g\ %g\ %g\n", rect.x(i), recv.x(i), recik_kA.x(i), recicaLVA_caLVA.x(i), recicaHVA_caHVA.x(i), recina_NaT.x(i), recina_NaP.x(i), recih_H.x(i), recik_kM.x(i), recik_kDR.x(i), recileak_leak.x(i))
+}
+tempmatrix.fprint(savdata, " %g")
+savdata.close()
+}

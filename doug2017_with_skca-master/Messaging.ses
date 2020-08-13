@@ -1,0 +1,40 @@
+// initiation of messaging for launching of Help File
+
+objref vbox3, vbox4
+vbox3 = new VBox()
+vbox3.intercept(1)   //all following creations go into the "vbox" box
+xpanel("Welcome to the vlPAG/DRN DA neuron model", 1)
+xlabel("")
+xlabel("Would you like to start simulating?")
+xlabel("")
+xbutton("YES", "YES()")
+xbutton("NO", "NO()")
+xpanel()
+vbox3.intercept(0)   //ends intercept mode
+vbox3.map("Welcome to the vlPAG/DRN DA neuron model",300, 300, -1, 1)
+
+proc vbox3UNMAP(){
+vbox3.unmap
+}
+
+proc vbox4map(){
+vbox4 = new VBox()
+vbox4.intercept(1)   //all following creations go into the "vbox" box
+continue_dialog("Please read the Help File first before running simulations")
+vbox4.intercept(0)   //ends intercept mode
+}
+
+proc YES(){
+init()
+vbox3UNMAP()
+vbox4map()
+mkHELP()
+
+}
+
+proc NO(){
+quit()
+}
+
+xopen("help_file.ses")
+load_file("SaveToFile.hoc")

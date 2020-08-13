@@ -1,0 +1,120 @@
+//Creation of a parameter box to control experimentation on the DA vlPAG/DRN neuron. 
+
+//Parameter box controls for each conductance its 
+//reversal potential(erev), Maximal conductance (gbar), Activation and Inactivation gating mechanisms (midpoint and slopes of steady-state activation curves)
+{
+xpanel("Conductance Parameter Box", 0)
+xlabel("Conductance reversal potential", 0)
+DA.ena = 50
+xvalue("ena","DA.ena", 1,"", 0, 0 )
+DA.ek = -73
+xvalue("ek","DA.ek", 1,"", 0, 0 )
+DA.eh_H = -40
+xvalue("eh_H","DA.eh_H", 1,"", 0, 0 )
+DA.eca = 120
+xvalue("eca","DA.eca", 1,"", 0, 0 )
+DA.eleak_leak = -55
+xvalue("eleak_leak","DA.eleak_leak", 1,"", 0, 0 )
+
+xlabel("Maximal Ionic Conductance")
+DA.gnaTbar_NaT = 0.02
+xvalue("gnaTbar_NaT","DA.gnaTbar_NaT", 1,"", 0, 0 )
+DA.gnaPbar_NaP = 2e-005
+xvalue("gnaPbar_NaP","DA.gnaPbar_NaP", 1,"", 0, 0 )
+DA.gkDRbar_kDR = 0.003
+xvalue("gkDRbar_kDR","DA.gkDRbar_kDR", 1,"", 0, 0 )
+DA.gkAbar_kA = 0.006
+xvalue("gkAbar_kA","DA.gkAbar_kA", 1,"", 0, 0 )
+DA.gkbar_cagk = 0.001
+xvalue("gkbar_cagk","DA.gkbar_cagk", 1,"", 0, 0 )
+DA.gkMbar_kM = 0.0008
+xvalue("gkMbar_kM","DA.gkMbar_kM", 1,"", 0, 0 )
+DA.ghbar_H = 8e-005
+xvalue("ghbar_H","DA.ghbar_H", 1,"", 0, 0 )
+DA.gcaHVAbar_caHVA = 4e-005
+xvalue("gcaHVAbar_caHVA","DA.gcaHVAbar_caHVA", 1,"", 0, 0 )
+DA.gcaLVAbar_caLVA = 4e-005
+xvalue("gcaLVAbar_caLVA","DA.gcaLVAbar_caLVA", 1,"", 0, 0 )
+DA.gleakbar_leak = 4e-005
+xvalue("gleakbar_leak","DA.gleakbar_leak", 1,"", 0, 0 )
+
+xlabel("----------------------------------------------------------------------------------")
+xlabel("STEADY-STATE Activation/Inactivation Functions")
+xlabel("      ***midpoint [vhalf] and slope [slope]***      ")
+xlabel("Transient Sodium current")
+DA.vhalfAct_NaT = -44
+xvalue("vhalfAct_NaT","DA.vhalfAct_NaT", 1,"", 0, 0 )
+DA.vhalfInact_NaT = -62
+xvalue("vhalfInact_NaT","DA.vhalfInact_NaT", 1,"", 0, 0 )
+DA.slopeAct_NaT = 4.5
+xvalue("slopeAct_NaT","DA.slopeAct_NaT", 1,"", 0, 0 )
+DA.slopeInact_NaT = -6.5
+xvalue("slopeInact_NaT","DA.slopeInact_NaT", 1,"", 0, 0 )
+
+xlabel("Persistent Sodium current")
+DA.vhalfAct_NaP = -57
+xvalue("vhalfAct_NaP","DA.vhalfAct_NaP", 1,"", 0, 0 )
+DA.slopeAct_NaP = 3.5
+xvalue("slopeAct_NaP","DA.slopeAct_NaP", 1,"", 0, 0 )
+DA.tau_m_NaP = 0.1
+xvalue("tau_m_NaP","DA.tau_m_NaP", 1,"", 0, 0 )
+
+xlabel("Persistent Delayed Rectifier potassium current")
+DA.vhalfkDRAct_kDR = -25
+xvalue("vhalfkDRAct_kDR","DA.vhalfkDRAct_kDR", 1,"", 0, 0 )
+DA.slopekDRAct_kDR = 12
+xvalue("slopekDRAct_kDR","DA.slopekDRAct_kDR", 1,"", 0, 0 )
+
+
+xlabel("Transient A-type potassium current")
+DA.vhalfAct_kA = -57.5
+xvalue("vhalfAct_kA","DA.vhalfAct_kA", 1,"", 0, 0 )
+DA.vhalfInact_kA = -93
+xvalue("vhalfInact_kA","DA.vhalfInact_kA", 1,"", 0, 0 )
+DA.slopeAct_kA = 7.7
+xvalue("slopeAct_kA","DA.slopeAct_kA", 1,"", 0, 0 )
+DA.slopeInact_kA = -6.1
+xvalue("slopeInact_kA","DA.slopeInact_kA", 1,"", 0, 0 )
+
+
+xlabel("Persistent M-type potassium current")
+DA.vhalfAct_kM = -35
+xvalue("vhalfAct_kM","DA.vhalfAct_kM", 1,"", 0, 0 )
+DA.slopeAct_kM = 8.5
+xvalue("slopeAct_kM","DA.slopeAct_kM", 1,"", 0, 0 )
+
+
+xlabel("Hyperpolarisation-activated cation current")
+DA.vhalfAct_H = -114.7
+xvalue("vhalfAct_H","DA.vhalfAct_H", 1,"", 0, 0 )
+DA.slopeAct_H = -12.8
+xvalue("slopeAct_H","DA.slopeAct_H", 1,"", 0, 0 )
+
+
+xlabel("HVA calcium current")
+DA.vhalfAct_caHVA = -22
+xvalue("vhalfAct_caHVA","DA.vhalfAct_caHVA", 1,"", 0, 0 )
+DA.vhalfInact_caHVA = -40
+xvalue("vhalfInact_caHVA","DA.vhalfInact_caHVA", 1,"", 0, 0 )
+DA.slopeAct_caHVA = 5
+xvalue("slopeAct_caHVA","DA.slopeAct_caHVA", 1,"", 0, 0 )
+DA.slopeInact_caHVA = -7
+xvalue("slopeInact_caHVA","DA.slopeInact_caHVA", 1,"", 0, 0 )
+
+xlabel("LVA calcium current")
+DA.vhalfAct_caLVA = -57.5
+xvalue("vhalfAct_caLVA","DA.vhalfAct_caLVA", 1,"", 0, 0 )
+DA.vhalfInact_caLVA = -83
+xvalue("vhalfInact_caLVA","DA.vhalfInact_caLVA", 1,"", 0, 0 )
+DA.slopeAct_caLVA = 6.5
+xvalue("slopeAct_caLVA","DA.slopeAct_caLVA", 1,"", 0, 0 )
+DA.slopeInact_caLVA = -6.1
+xvalue("slopeInact_caLVA","DA.slopeInact_caLVA", 1,"", 0, 0 )
+
+xpanel(1178,0)
+}
+
+objectvar scene_vector_[1]
+{doNotify()}
+
+xopen("Messaging.ses")
