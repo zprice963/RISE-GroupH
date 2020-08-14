@@ -1,10 +1,16 @@
 # Modeling the Effects of Social Isolation on Serotonergic Neurons by Upregulating Calcium-Activated Potassium Channels 
 
-### Caledonia Grant (1,4), David Park (2,4), Zoe Price (3,4),  Samad Shaikh (2,4), Dr. Marianne Bezaire (4)
+### Caledonia Grant (1,4), David Park (2,4), Zoe Price (3,4), Samad Shaikh (2,4), Dr. Marianne Bezaire (4)
 
-Ripon High School, 850 Tiger Dr, Ripon, WI 549711; Northview High School, 10625 Parsons Rd, Johns Creek, GA 30097 2; The Kinkaid School, 201 Kinkaid School Dr, Houston, TX 770243;  Boston University, Boston, MA 02215 4
+Ripon High School, 850 Tiger Dr, Ripon, WI 54971 (1); Northview High School, 10625 Parsons Rd, Johns Creek, GA 30097 (2); The Kinkaid School, 201 Kinkaid School Dr, Houston, TX 77024 (3);  Boston University, Boston, MA 02215 (4)
 
 This project was conducted as a part of Boston University's Research in Science and Engineering program over the summer of 2020.
+
+--------------------------------------------------------------------------------------------
+
+## Poster
+
+## Research Paper
 
 ### Background
 The world we currently live in has become a strange and turbulent place. The last five months have been an emotional roller coaster as a result of cancelled activities, the uncertain future, and quarantine associated with the pandemic. Interestingly, 53% of American adults believe that the pandemic is taking a toll on their mental health, and many have reported symptoms of depression and/or anxiety due to social isolation. In order to gain a better understanding of how the coronavirus is affecting mental health and brain physiology, this project looks at how social isolation is causing depression-like symptoms in certain individuals. Of course, this project focuses on just one aspect of the effect of isolation, but it offers an explanation for why many people are suffering from symptoms of depression without social interaction.
@@ -16,6 +22,14 @@ Depression is a mental health disorder characterized by a persistently depressed
 This code models a serotonergic neuron in the dorsal raphe nucleus under the conditions of social isolation. Using code modeling a dopamine neuron in the same region of the brain from Dougalis et al., a model was developed by altering the neuron's properties and adding calcium-activated potassium channels to more closely resemble a serotonin neuron. The neuron's behavior was validated with in vitro neurophysiological data from Tuckwell et al. before conducting any analysis. In order to replicate 5-HT neuron conditions seen in rodents with Social Isolation Stress (SIS), SK3 channel conductance was modified, as well as the flow of calcium ions. This allowed the generation of data similar to that seen in the study conducted by Sargin et al. The firing rates of the cell were then simulated using the model for various time intervals, up to the firing rate over a course of 10 weeks. The data was then analyzed to determine the decrease in firing rate per day as a result of the modification of SK3 channels and calcium ion voltage, assuming a sigmoidal relationship between the increase in SK3 channel conductance and isolation day. Further modification of calcium ion voltage was then analyzed as a possible therapeutic target for SIS depression-like symptoms.
 
 ### Results
+
+Graph 1: Firing Rate (Hz) vs. Maximum Ionic Conductance (S/cm^2)
+
+Graph 2: Change in Firing Rate (%) vs. Change in Maximum Ionic Conductance from Healthy Cell (%)
+
+Graph 3: Change in Firing Rate (%) vs. Social Isolation Period (Weeks)
+
+Figure 1: Firing Patterns
 
 ### Discussion
 This project reveals that increasing the conductance of the calcium-activated potassium channels decreases the firing rate of the serotonin neuron, and the graph shows a sigmoidal relationship between the conductance of these channels and the firing rate of the neuron. Furthermore, our project reveals that prolonged social isolation stress does have significant long-term effects on serotonin pathways in the brain: the data shows that increasing the time interval of isolation decreases the firing rate of the serotonin neuron even more, showing that longer social isolation is more likely to lead to stronger symptoms of depression. Of course, this project does have limitations. For example, this project was based on a computational model of a dopamine neuron in the dorsal raphe nucleus, not a serotonin neuron. This could have an effect on the firing rates measured by the model and the effects of the SK channel on the neuron. Furthermore, in order to have the model neuron behave normally, changes in the concentration of each type of channel were made, and these changes may not accurately resemble the channel concentrations in the serotonin neuron. However, this model still gives an accurate representation of how SK channel regulation impacts a serotonin neuron in the dorsal raphe nucleus, and therefore, this model could help in the development of depression treatments. Most current antidepressants are selective serotonin reuptake inhibitors (SSRIs), which work by blocking the uptake of serotonin by the presynaptic neuron, allowing the serotonin to remain in the synapse and continue to stimulate the postsynaptic neuron. However, if the serotonin neuron is not firing as frequently due to upregulation of the SK3 channel, these SSRI drugs will not have much of an effect, as there will not be much serotonin released into the synapse to stimulate the postsynaptic neuron. By targeting the SK3 channels on DRN serotonin neurons, future antidepressants could help modulate the firing rate of these neurons, ensuring enough serotonin is constantly released into the synapse, and our research provides accurate measurements of the exact effects of calcium-activated potassium channel regulation.
