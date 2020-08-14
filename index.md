@@ -4,8 +4,10 @@
 
 Ripon High School, 850 Tiger Dr, Ripon, WI 549711; Northview High School, 10625 Parsons Rd, Johns Creek, GA 30097 2; The Kinkaid School, 201 Kinkaid School Dr, Houston, TX 770243;  Boston University, Boston, MA 02215 4
 
-### Background
+This project was conducted as a part of Boston University's Research in Science and Engineering program over the summer of 2020.
 
+### Background
+The world we currently live in has become a strange and turbulent place. The last five months have been an emotional roller coaster as a result of cancelled activities, the uncertain future, and quarantine associated with the pandemic. Interestingly, 53% of American adults believe that the pandemic is taking a toll on their mental health, and many have reported symptoms of depression and/or anxiety due to social isolation. In order to gain a better understanding of how the coronavirus is affecting mental health and brain physiology, this project looks at how social isolation is causing depression-like symptoms in certain individuals. Of course, this project focuses on just one aspect of the effect of isolation, but it offers an explanation for why many people are suffering from symptoms of depression without social interaction.
 
 ### Introduction
 Depression is a mental health disorder characterized by a persistently depressed mood or a loss of interest in activites, causing a significant impairment in patient's daily lives. While there are many potential causes of depression, the monoamine hypothesis predicts that the underlying pathophysologic basis of depression is a depletion in the levels of certain neurotransmitters in the central nervous system, such as serotonin, also known as 5-HT (Jesulola et al., 2018). A significant portion of the serotonin innervation to the forebrain comes from the dorsal raphe nucleus (DRN), the largest serotonergic nucleus in the brain, and it is known that Social Isolation Stress (SIS) renders mouse DRN serotonergic neurons less responsive to stimulation (Sargin et al., 2016). In mice, chronic social isolation upregulates SK3 channels, a type of small-conductance calcium-activated potassium channel, which causes a reduction in excitability in the 5-HT neuron (Sargin et al., 2016). This decrease in excitability means the neuron is less likely to fire, significantly lowering the amount of serotonin released in the brain and likely leading to the anxiety and depressive-like behaviors associated with social isolation (Sargin et al., 2016). This study examines the possibility of down-regulating these SK3 channels as a method of increasing 5-HT levels in the DRN of humans.
@@ -30,8 +32,9 @@ Tuckwell, H. C., & Penington, N. J. (2014). Computational modeling of spike gene
 
 
 ### Acknowledgements
-
-
-```markdown
-```
-
+Thank you to:
+- Dr. Marianne Bezaire, for teaching us during the course of the RISE program and helping us code our model
+- Yiwen Gu, Scott Knudstrup, Wenxing Liu, and Feiyuan Yu, for answering all of our questions, as well as for helping us develop our project idea and presentation
+- Dr. Amanda Kautzman, for organizing an amazing program and putting together a fantastic symposium
+- Ms. Kaitlyn Dorst, for helping us develop a deeper understanding of neuroscience and delivering fascinating lectures each morning
+- the Boston University faculty, for making this program happen
