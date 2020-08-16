@@ -4,13 +4,15 @@
 
 Ripon High School, 850 Tiger Dr, Ripon, WI 54971 (1); Northview High School, 10625 Parsons Rd, Johns Creek, GA 30097 (2); The Kinkaid School, 201 Kinkaid School Dr, Houston, TX 77024 (3);  Boston University, Boston, MA 02215 (4)
 
-This project was conducted as a part of Boston University's Research in Science and Engineering program over the summer of 2020.
+This part of the project was conducted as a part of Boston University's Research in Science and Engineering program over the summer of 2020.
 
 --------------------------------------------------------------------------------------------
 
 ## Poster
 
-## Research Paper
+*insert link to google drive for poster*
+
+## Research
 
 ### Background
 The world we currently live in has become a strange and turbulent place. The last five months have been an emotional roller coaster as a result of cancelled activities, the uncertain future, and quarantine associated with the pandemic. Interestingly, 53% of American adults believe that the pandemic is taking a toll on their mental health, and many have reported symptoms of depression and/or anxiety due to social isolation. In order to gain a better understanding of how the coronavirus is affecting mental health and brain physiology, this project looks at how social isolation is causing depression-like symptoms in certain individuals. Of course, this project focuses on just one aspect of the effect of isolation, but it offers an explanation for why many people are suffering from symptoms of depression without social interaction.
@@ -23,12 +25,24 @@ This code models a serotonergic neuron in the dorsal raphe nucleus under the con
 
 ### Results
 
+```markdown
+![Graph 1](url)
+```
 Graph 1: Firing Rate (Hz) vs. Maximum Ionic Conductance (S/cm^2)
 
+```markdown
+![Graph 2](url)
+```
 Graph 2: Change in Firing Rate (%) vs. Change in Maximum Ionic Conductance from Healthy Cell (%)
 
+```markdown
+![Graph 3](url)
+```
 Graph 3: Change in Firing Rate (%) vs. Social Isolation Period (Weeks)
 
+```markdown
+![Figure 1](url)
+```
 Figure 1: Firing Patterns
 
 ### Discussion
@@ -52,3 +66,8 @@ Thank you to:
 - Dr. Amanda Kautzman, for organizing an amazing program and putting together a fantastic symposium
 - Ms. Kaitlyn Dorst, for helping us develop a deeper understanding of neuroscience and delivering fascinating lectures each morning
 - the Boston University faculty, for making this program happen
+
+### Code
+Link to GitHub repository: https://github.com/zprice963/RISE-GroupH
+
+## Project continuation
